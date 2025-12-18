@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET — fixes half-screen issue */
+html, body, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+/* Clean root styling */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #111827;
+  background-color: #f9fafb;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove Vite starter CSS — NOT needed */
+body {
+  background-color: #f9fafb;
+}
+
+/* Optional button reset */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Remove dark mode defaults from Vite */
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #f9fafb;
+    color: #111827;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
